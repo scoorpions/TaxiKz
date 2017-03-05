@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RegInput">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/primaryText</item>
+        <item name="android:textColorHint">#ffcccccc</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:gravity">fill_horizontal</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:imeOptions">actionGo</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_bg_orange</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+</resources>

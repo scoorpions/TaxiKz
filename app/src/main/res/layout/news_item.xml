@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="16.0dip">
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        android:id="@+id/textViewTitle"
+        style="@style/runningText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="Title"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/primaryText"
+        app:typeface="roboto_condensed_regular" />
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="description"
+        android:textColor="@color/secondaryText"
+        app:typeface="roboto_condensed_regular" />
+
+    <com.devspark.robototextview.widget.RobotoTextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="0.0dip"
+        android:layout_weight="0.0"
+        android:gravity="center"
+        android:text="3:20"
+        android:textColor="@color/secondaryText" />
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">15.0dip</dimen>
+    <dimen name="button_text_size">13.0sp</dimen>
+    <dimen name="default_text_size">15.0sp</dimen>
+    <dimen name="dialog_width">250.0dip</dimen>
+    <dimen name="float_button_size">1.0dip</dimen>
+    <dimen name="navigation_drawer_width">320.0dip</dimen>
+    <dimen name="toolbar_elevation">7.0dip</dimen>
+    <dimen name="need_update_text_size">40.0sp</dimen>
+    <dimen name="activity_horizontal_margin_top">15.0dip</dimen>
+    <dimen name="main_address_text_size">14.0sp</dimen>
+    <dimen name="main_comment_text_size">16.0sp</dimen>
+    <dimen name="name_width">140.0dip</dimen>
+    <dimen name="ok_button_height">40.0dip</dimen>
+    <dimen name="ok_button_width">90.0dip</dimen>
+</resources>

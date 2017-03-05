@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="linkBuilderStyle" format="reference" />
+    <attr name="defaultLinkColor" format="color" />
+    <declare-styleable name="ForegroundLinearLayout">
+        <attr name="android:foreground" />
+        <attr name="android:foregroundInsidePadding" />
+        <attr name="android:foregroundGravity" />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonBarContainerTheme">
+        <attr name="metaButtonBarStyle" format="reference" />
+        <attr name="metaButtonBarButtonStyle" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="FloatLabeledEditText">
+        <attr name="fletTextAppearance" format="reference" />
+        <attr name="fletPadding" format="reference|dimension" />
+        <attr name="fletPaddingLeft" format="reference|dimension" />
+        <attr name="fletPaddingTop" format="reference|dimension" />
+        <attr name="fletPaddingRight" format="reference|dimension" />
+        <attr name="fletPaddingBottom" format="reference|dimension" />
+        <attr name="fletBackground" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="ForegroundImageView">
+        <attr name="android:foreground" />
+    </declare-styleable>
+    <!-- roboto-->
+
+    <declare-styleable name="RobotoAutoCompleteTextView">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoButton">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoCheckBox">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoCheckedTextView">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoChronometer">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoCompoundButton">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoDigitalClock">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoEditText">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoExtractEditText">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoMultiAutoCompleteTextView">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoRadioButton">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoSwitch">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoTextClock">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoTextView">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="RobotoToggleButton">
+        <attr name="typeface"/>
+        <attr name="fontFamily"/>
+        <attr name="textWeight"/>
+        <attr name="textStyle"/>
+    </declare-styleable>
+
+
+    <attr name="typeface">
+        <enum name="roboto_thin" value="0"/>
+        <enum name="roboto_thin_italic" value="1"/>
+        <enum name="roboto_light" value="2"/>
+        <enum name="roboto_light_italic" value="3"/>
+        <enum name="roboto_regular" value="4"/>
+        <enum name="roboto_italic" value="5"/>
+        <enum name="roboto_medium" value="6"/>
+        <enum name="roboto_medium_italic" value="7"/>
+        <enum name="roboto_bold" value="8"/>
+        <enum name="roboto_bold_italic" value="9"/>
+        <enum name="roboto_black" value="10"/>
+        <enum name="roboto_black_italic" value="11"/>
+        <enum name="roboto_condensed_light" value="12"/>
+        <enum name="roboto_condensed_light_italic" value="13"/>
+        <enum name="roboto_condensed_regular" value="14"/>
+        <enum name="roboto_condensed_italic" value="15"/>
+        <enum name="roboto_condensed_bold" value="16"/>
+        <enum name="roboto_condensed_bold_italic" value="17"/>
+        <enum name="roboto_slab_thin" value="18"/>
+        <enum name="roboto_slab_light" value="19"/>
+        <enum name="roboto_slab_regular" value="20"/>
+        <enum name="roboto_slab_bold" value="21"/>
+    </attr>
+
+    <attr name="fontFamily">
+        <enum name="roboto" value="0"/>
+        <enum name="roboto_condensed" value="1"/>
+        <enum name="roboto_slab" value="2"/>
+    </attr>
+
+    <attr name="textWeight">
+        <enum name="normal" value="0"/>
+        <enum name="thin" value="1"/>
+        <enum name="light" value="2"/>
+        <enum name="medium" value="3"/>
+        <enum name="bold" value="4"/>
+        <enum name="ultra_bold" value="5"/>
+    </attr>
+
+    <attr name="textStyle">
+        <enum name="normal" value="0"/>
+        <enum name="italic" value="1"/>
+    </attr>
+    <!--Materialish-->
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+    <attr name="fletFloatingHint" format="string" />
+    <attr name="fletSingleLine" format="boolean" />
+    <attr name="fletPassword" format="boolean" />
+    <attr name="fletTextBackground" format="reference" />
+    <attr name="fletTextGravity">
+        <flag name="end" value="0x00800005" />
+        <flag name="top" value="0x00000030" />
+        <flag name="bottom" value="0x00000050" />
+        <flag name="left" value="0x00000003" />
+        <flag name="right" value="0x00000005" />
+        <flag name="center_vertical" value="0x00000010" />
+        <flag name="fill_vertical" value="0x00000070" />
+        <flag name="center_horizontal" value="0x00000001" />
+        <flag name="fill_horizontal" value="0x00000007" />
+        <flag name="center" value="0x00000011" />
+        <flag name="fill" value="0x00000077" />
+        <flag name="clip_vertical" value="0x00000080" />
+        <flag name="clip_horizontal" value="0x00000008" />
+        <flag name="start" value="0x00800003" />
+    </attr>
+    <attr name="fletTextLines" format="integer" />
+    <attr name="fletHintTextColor" format="reference|color" />
+    <attr name="fletTextColor" format="reference|color" />
+    <attr name="fletImeActionLabel" format="string" />
+    <attr name="fletImeActionId" format="integer" />
+    <attr name="fletInputType">
+        <flag name="none" value="0x00000000" />
+        <flag name="text" value="0x00000001" />
+        <flag name="textCapCharacters" value="0x00001001" />
+        <flag name="textCapWords" value="0x00002001" />
+        <flag name="textCapSentences" value="0x00004001" />
+        <flag name="textAutoCorrect" value="0x00008001" />
+        <flag name="textAutoComplete" value="0x00010001" />
+        <flag name="textMultiLine" value="0x00020001" />
+        <flag name="textImeMultiLine" value="0x00040001" />
+        <flag name="textNoSuggestions" value="0x00080001" />
+        <flag name="textUri" value="0x00000011" />
+        <flag name="textEmailAddress" value="0x00000021" />
+        <flag name="textEmailSubject" value="0x00000031" />
+        <flag name="textShortMessage" value="0x00000041" />
+        <flag name="textLongMessage" value="0x00000051" />
+        <flag name="textPersonName" value="0x00000061" />
+        <flag name="textPostalAddress" value="0x00000071" />
+        <flag name="textPassword" value="0x00000081" />
+        <flag name="textVisiblePassword" value="0x00000091" />
+        <flag name="textWebEditText" value="0x000000a1" />
+        <flag name="textFilter" value="0x000000b1" />
+        <flag name="textPhonetic" value="0x000000c1" />
+        <flag name="textWebEmailAddress" value="0x000000d1" />
+        <flag name="textWebPassword" value="0x000000e1" />
+        <flag name="number" value="0x00000002" />
+        <flag name="numberSigned" value="0x00001002" />
+        <flag name="numberDecimal" value="0x00002002" />
+        <flag name="numberPassword" value="0x00000012" />
+        <flag name="phone" value="0x00000003" />
+        <flag name="datetime" value="0x00000004" />
+        <flag name="date" value="0x00000014" />
+        <flag name="time" value="0x00000024" />
+    </attr>
+    <attr name="fletImeOptions">
+        <flag name="normal" value="0x00000000" />
+        <flag name="actionUnspecified" value="0x00000000" />
+        <flag name="actionNone" value="0x00000001" />
+        <flag name="actionGo" value="0x00000002" />
+        <flag name="actionSearch" value="0x00000003" />
+        <flag name="actionSend" value="0x00000004" />
+        <flag name="actionNext" value="0x00000005" />
+        <flag name="actionDone" value="0x00000006" />
+        <flag name="actionPrevious" value="0x00000007" />
+        <flag name="flagNoFullscreen" value="0x02000000" />
+        <flag name="flagNavigatePrevious" value="0x04000000" />
+        <flag name="flagNavigateNext" value="0x08000000" />
+        <flag name="flagNoExtractUi" value="0x10000000" />
+        <flag name="flagNoAccessoryAction" value="0x20000000" />
+        <flag name="flagNoEnterAction" value="0x40000000" />
+        <flag name="flagForceAscii" value="0x80000000" />
+    </attr>
+
+    <declare-styleable name="MaterialRippleLayout">
+        <attr name="mrl_rippleColor" format="color" localization="suggested" />
+        <attr name="mrl_rippleDimension" format="dimension" localization="suggested" />
+        <attr name="mrl_rippleOverlay" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleAlpha" format="float" localization="suggested" />
+        <attr name="mrl_rippleDuration" format="integer" localization="suggested" />
+        <attr name="mrl_rippleFadeDuration" format="integer" localization="suggested" />
+        <attr name="mrl_rippleHover" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleBackground" format="color" localization="suggested" />
+        <attr name="mrl_rippleDelayClick" format="boolean" localization="suggested" />
+        <attr name="mrl_ripplePersistent" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleInAdapter" format="boolean" localization="suggested" />
+        <attr name="mrl_rippleRoundedCorners" format="dimension" localization="suggested" />
+    </declare-styleable>
+
+    <declare-styleable name="MaskedEditText">
+        <attr name="mask" format="string" />
+        <attr name="allowed_chars" format="string" />
+        <attr name="denied_chars" format="string" />
+        <attr name="char_representation" format="string" />
+    </declare-styleable>
+</resources>

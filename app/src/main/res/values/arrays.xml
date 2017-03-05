@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="credits_icons_links">
+        <item>&lt;a href=http://www.flaticon.com/authors/robin-kylander>Robin Kylander&lt;/a></item>
+        <item>&lt;a href=http://www.flaticon.com/authors/madebyoliver>Madebyoliver&lt;/a></item>
+        <item>&lt;a href=http://www.flaticon.com/authors/lucy-g>Lucy G&lt;/a></item>
+        <item>&lt;a href=http://www.flaticon.com/authors/gregor-cresnar>Gregor Cresnar&lt;/a></item>
+        <item>&lt;a href=http://www.flaticon.com/authors/nikita-golubev>Nikita Golubev&lt;/a></item>
+        <item>&lt;a href=http://www.flaticon.com/authors/nice-and-serious>Nice and Serious&lt;/a></item>
+        <item>&lt;a href=http://www.flaticon.com/authors/icomoon>Icomoon&lt;/a></item>
+        <item>&lt;a href=http://www.flaticon.com/authors/naseer-ahmed>Naseer Ahmed&lt;/a></item>
+        <item>&lt;a href=http://www.freepik.com>Freepik&lt;/a></item>
+        <item>&lt;a href=https://design.google.com/icons/>Google Material Icons&lt;/a></item>
+    </string-array>
+    <string-array name="emails">
+        <item>cpentyc@gmail.com</item>
+        <item>taxikz5@gmail.com</item>
+        <item>chemax.72@gmail.com</item>
+        <item>mkts.merkel@gmail.com</item>
+        <item>oficce505505@gmail.com</item>
+    </string-array>
+</resources>

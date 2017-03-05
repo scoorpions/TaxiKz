@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@id/about_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:id="@id/view_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/toolbar"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="15.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginStart="10.0dip"
+                    android:layout_marginTop="20.0dip"
+                    android:text="version: "
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/default_text_size"
+                    app:typeface="roboto_condensed_regular" />
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:id="@id/view_copyright"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="25.0dip"
+                    android:layout_marginEnd="10.0dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:layout_marginStart="10.0dip"
+                    android:layout_marginTop="16.0dip"
+                    android:text="@string/about_copyright"
+                    android:textColor="@color/primaryText"
+                    android:textSize="@dimen/default_text_size"
+                    app:typeface="roboto_condensed_regular" />
+
+                <com.devspark.robototextview.widget.RobotoTextView
+                    android:id="@id/view_content"
+                    android:layout_width="@dimen/dialog_width"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/view_version"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/primaryText"
+                    android:textSize="17.0sp"
+                    app:typeface="roboto_condensed_regular" />
+            </RelativeLayout>
+
+            <View
+                android:id="@id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/divider" />
+
+            <Button
+                android:id="@id/show_policy_button"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="56.0dip"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginRight="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:text="@string/policy_button_text"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@id/show_credits_button"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="56.0dip"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginRight="8.0dip"
+                android:text="@string/credits_button_text"
+                android:textSize="14.0sp" />
+
+            <LinearLayout
+                android:id="@id/credits_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/cf_sv_layout_marginLR"
+                android:layout_marginRight="@dimen/cf_sv_layout_marginLR"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/cf_license_icon_layout_marginTB"
+                    android:layout_marginTop="@dimen/cf_license_icon_layout_marginTB"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/cf_license_icon_size"
+                        android:layout_height="@dimen/cf_license_icon_size"
+                        android:layout_marginRight="@dimen/cf_license_icon_spacing"
+                        android:src="@mipmap/cc_cc" />
+
+                    <ImageView
+                        android:layout_width="@dimen/cf_license_icon_size"
+                        android:layout_height="@dimen/cf_license_icon_size"
+                        android:src="@mipmap/cc_by" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@id/credits_cc_license_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/cf_license_text_text_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/cf_links_caption_marginB"
+                    android:layout_marginTop="@dimen/cf_links_caption_marginT"
+                    android:text="@string/credits_icons_area_caption"
+                    android:textSize="@dimen/cf_links_caption_text_size" />
+
+                <LinearLayout
+                    android:id="@id/credits_icons_links_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

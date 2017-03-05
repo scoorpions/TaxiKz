@@ -1,0 +1,188 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'io.fabric.tools:gradle:1.21.6'
+        classpath 'me.tatarka:gradle-retrolambda:3.2.3'
+    }
+}
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+// Manifest version information!
+def versionMajor = 1
+def versionMinor = 3
+def versionPatch = 0
+def versionBuild = 1 // bump for dogfood builds, public betas, etc.
+
+
+def gitSha() {
+    def p = 'git rev-parse --short HEAD'.execute([], project.rootDir)
+    p.waitFor()
+    if (p.exitValue() != 0) {
+        throw new RuntimeException(p.errorStream.text)
+    }
+
+    return p.text.trim()
+}
+
+def gitTimestamp() {
+    def p = 'git log -n 1 --format=%at'.execute([], rootDir)
+    p.waitFor()
+    if (p.exitValue() != 0) {
+        throw new RuntimeException(p.errorStream.text)
+    }
+
+    return p.text.trim()
+}
+
+def isCi = "true".equals(System.getenv("CI"))
+def preDexEnabled = "true".equals(System.getProperty("pre-dex", "true"))
+
+
+android {
+
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
+
+    dexOptions {
+        // Skip pre-dexing when running on Travis CI or when disabled via -Dpre-dex=false.
+        preDexLibraries = preDexEnabled && !isCi
+    }
+
+    signingConfigs {
+        taxikz {
+            storeFile file('../taxikz.kz.jks')
+            storePassword '641308'
+            keyAlias 'taxikz.kz'
+            keyPassword '641308'
+        }
+    }
+
+    defaultConfig {
+        applicationId "kz.taxi.taxi4"
+
+        minSdkVersion 14
+        targetSdkVersion 25
+
+        versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+
+        signingConfig signingConfigs.taxikz
+
+        buildConfigField 'String', 'GIT_SHA', "\"${gitSha()}\""
+        buildConfigField 'long', 'GIT_TIMESTAMP', "${gitTimestamp()}L"
+
+        vectorDrawables.useSupportLibrary = true
+
+    }
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
+}
+
+dependencies {
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.6@aar') {
+        transitive = true;
+    }
+    compile('com.crashlytics.sdk.android:answers:1.3.8@aar') {
+        transitive = true;
+    }
+    apt 'com.google.dagger:dagger-compiler:2.0.1'
+    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.android.support:recyclerview-v7:25.2.0'
+    compile 'com.android.support:cardview-v7:25.2.0'
+    compile 'com.android.support:design:25.2.0'
+
+    compile 'com.google.android.gms:play-services-gcm:10.2.0'
+//    compile 'com.google.firebase:firebase-analytics:10.2.0'
+    compile 'com.birbit:android-priority-jobqueue:2.0.1'
+
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.nhaarman.listviewanimations:lib-core:3.1.0@aar'
+    compile 'com.nhaarman.listviewanimations:lib-manipulation:3.1.0@aar'
+    compile 'com.wang.avi:library:2.1.3'
+
+    compile 'com.github.johnkil.android-robototextview:robototextview:2.5.0'
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    compile 'org.jetbrains:annotations-java5:15.0'
+
+    compile 'com.j256.ormlite:ormlite-android:4.48'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.google.dagger:dagger:2.0.1'
+
+    compile 'com.squareup:otto:1.3.8'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4-beta2'
+    compile 'com.jakewharton.timber:timber:4.5.1'
+    compile 'com.jakewharton.rxbinding:rxbinding:0.2.0'
+    compile 'com.jakewharton.byteunits:byteunits:0.9.1'
+    compile 'com.jakewharton:butterknife:8.0.1'
+
+}
+
+// build a jar with source files
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    failOnError false
+    source = android.sourceSets.main.java.sourceFiles
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+// build a jar with javadoc
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.getDestinationDir()
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+/*
+All direct/transitive dependencies shared between your test and production APKs need to be
+excluded from the test APK! This is necessary because both APKs will contain the same classes. Not
+excluding these dependencies from your test configuration will result in an dex pre-verifier error
+at runtime. More info in this tools bug: (https://code.google.com/p/android/issues/detail?id=192497)
+*/
+configurations.compile.dependencies.each { compileDependency ->
+    println "Excluding compile dependency: ${compileDependency.getName()}"
+    configurations.androidTestCompile.dependencies.each { androidTestCompileDependency ->
+        configurations.androidTestCompile.exclude module: "${compileDependency.getName()}"
+    }
+}
+
+//apply plugin: 'com.google.gms.google-services'

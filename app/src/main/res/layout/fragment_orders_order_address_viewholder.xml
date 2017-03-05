@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/address_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/of_address_item_height"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/of_address_item_marginL"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="@dimen/of_address_item_icon_layout_width"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/of_address_item_icon_margin_right"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/icon_top_line_view"
+                android:layout_width="1.0dip"
+                android:layout_height="0.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="@android:color/black" />
+
+            <ImageView
+                android:id="@+id/icon_imageView"
+                android:layout_width="@dimen/of_address_item_start_end_icon_size"
+                android:layout_height="@dimen/of_address_item_start_end_icon_size"
+                android:layout_gravity="center"
+                android:src="@mipmap/start_point"
+                android:tint="@color/icons" />
+
+            <View
+                android:id="@+id/icon_bottom_line_view"
+                android:layout_width="1.0dip"
+                android:layout_height="0.0dip"
+                android:layout_gravity="center"
+                android:layout_weight="1.0"
+                android:background="@android:color/black" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingRight="@dimen/of_address_item_marginR"
+                android:text="ЦУМ магазин"
+                android:textColor="@color/secondaryText"
+                android:textSize="14.0sp" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1.0dip"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:background="@color/divider" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
