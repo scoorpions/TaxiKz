@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    android:id="@id/mainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:padding="16.0dip">
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <EditText
+            android:id="@+id/edit_text_name"
+            style="@style/CodeTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/name_caption"
+            android:inputType="textCapSentences"
+            android:textColor="@color/primaryText" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/textInputLayoutPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <kz.taxikz.ui.widget.view.maskedEditText.MaskedEditText
+            android:id="@+id/edit_text_phone"
+            style="@style/CodeTextStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:textColor="@color/primaryText"
+            android:typeface="monospace"
+            mask:allowed_chars="1234567890"
+            mask:mask="+7(7##)###-##-##" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/buttonLogIn"
+        android:layout_width="match_parent"
+        android:layout_height="64.0dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32.0dip"
+        android:text="@string/sign_in_login"
+        android:theme="@style/AppTheme.Button.PrimaryColor" />
+</LinearLayout>

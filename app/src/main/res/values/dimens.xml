@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_horizontal_margin">16.0dip</dimen>
+    <dimen name="button_text_size">15.0sp</dimen>
+    <dimen name="cancel_order_popmenu_width">200.0dip</dimen>
+    <dimen name="default_text_size">17.0sp</dimen>
+    <dimen name="dialog_width">280.0dip</dimen>
+    <dimen name="float_button_size">14.0dip</dimen>
+    <dimen name="navigation_drawer_width">240.0dip</dimen>
+    <dimen name="text_size">16.0sp</dimen>
+    <dimen name="toolbar_elevation">4.0dip</dimen>
+    <dimen name="need_update_text_size">50.0sp</dimen>
+
+    <dimen name="about_text_size">18.0sp</dimen>
+
+    <dimen name="activity_vertical_margin">16.0dip</dimen>
+    <dimen name="address_fragment_default_item_icon_marginLR">16.0dip</dimen>
+    <dimen name="address_fragment_default_item_icon_size">24.0dip</dimen>
+    <dimen name="address_text_size">14.0sp</dimen>
+    <dimen name="avh_icon_layout_width">24.0dip</dimen>
+    <dimen name="avh_no_price_text_size">16.0sp</dimen>
+    <dimen name="avh_price_text_size">22.0sp</dimen>
+    <item type="dimen" name="avh_start_end_icon_size">@dimen/order_fragment_default_item_icon_size</item>
+    <dimen name="avh_stay_icon_size">12.0dip</dimen>
+    <dimen name="cardview_compat_inset_shadow">1.0dip</dimen>
+    <dimen name="cardview_default_elevation">2.0dip</dimen>
+    <dimen name="cardview_default_radius">2.0dip</dimen>
+    <dimen name="cf_license_icon_layout_marginTB">16.0dip</dimen>
+    <dimen name="cf_license_icon_size">48.0dip</dimen>
+    <dimen name="cf_license_icon_spacing">16.0dip</dimen>
+    <dimen name="cf_license_text_text_size">14.0sp</dimen>
+    <dimen name="cf_links_caption_marginB">8.0dip</dimen>
+    <dimen name="cf_links_caption_marginT">32.0dip</dimen>
+    <dimen name="cf_links_caption_text_size">14.0sp</dimen>
+    <dimen name="cf_links_last_marginB">16.0dip</dimen>
+    <dimen name="cf_links_marginTB">8.0dip</dimen>
+    <dimen name="cf_links_text_size">14.0sp</dimen>
+    <dimen name="cf_sv_layout_marginLR">16.0dip</dimen>
+    <dimen name="default_title_size">25.0sp</dimen>
+
+    <dimen name="edit_text_height">14.0sp</dimen>
+    <dimen name="fab_margin">16.0dip</dimen>
+
+    <dimen name="margin">8.0dip</dimen>
+    <dimen name="md_keylines">16.0dip</dimen>
+    <dimen name="nav_header_height">160.0dip</dimen>
+    <dimen name="nav_header_vertical_spacing">0.0dip</dimen>
+
+    <dimen name="of_address_item_height">44.0dip</dimen>
+    <dimen name="of_address_item_icon_layout_width">24.0dip</dimen>
+    <dimen name="of_address_item_icon_margin_right">24.0dip</dimen>
+    <dimen name="of_address_item_marginL">12.0dip</dimen>
+    <dimen name="of_address_item_marginR">24.0dip</dimen>
+    <dimen name="of_address_item_start_end_icon_size">18.0dip</dimen>
+    <dimen name="of_address_item_stay_icon_size">8.0dip</dimen>
+    <dimen name="of_driver_info_icon_size">24.0dip</dimen>
+    <dimen name="of_driver_info_icon_size_margin_right">24.0dip</dimen>
+    <dimen name="of_driver_info_marginLR">18.0dip</dimen>
+    <dimen name="order_fragment_additional_item_icon_margin_right">20.0dip</dimen>
+    <dimen name="order_fragment_additional_item_margin_left">16.0dip</dimen>
+    <dimen name="order_fragment_default_item_height">56.0dip</dimen>
+    <dimen name="order_fragment_default_item_icon_margin_right">24.0dip</dimen>
+    <dimen name="order_fragment_default_item_icon_size">24.0dip</dimen>
+    <dimen name="order_fragment_default_item_margin_left">20.0dip</dimen>
+    <dimen name="order_fragment_details_item_height">52.0dip</dimen>
+    <dimen name="order_fragment_large_item_icon_size">32.0dip</dimen>
+    <dimen name="orders_activity_horizontal_margin">8.0dip</dimen>
+    <dimen name="orders_activity_vertical_margin">8.0dip</dimen>
+    <dimen name="search_view_item_padding">3.0dip</dimen>
+    <dimen name="search_view_item_radius">2.0dip</dimen>
+    <dimen name="signin_header_height">148.0dip</dimen>
+    <dimen name="spinner_item_height">72.0dip</dimen>
+</resources>

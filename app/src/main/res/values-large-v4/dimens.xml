@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="abc_action_bar_height">50.0dip</dimen>
+    <dimen name="abc_config_prefDialogWidth">440.0dip</dimen>
+    <item type="dimen" name="abc_dialog_fixed_height_major">60.000004%</item>
+    <item type="dimen" name="abc_dialog_fixed_height_minor">90.0%</item>
+    <item type="dimen" name="abc_dialog_fixed_width_major">60.000004%</item>
+    <item type="dimen" name="abc_dialog_fixed_width_minor">90.0%</item>
+    <item type="dimen" name="abc_dialog_min_width_major">54.999996%</item>
+    <item type="dimen" name="abc_dialog_min_width_minor">79.99999%</item>
+    <dimen name="activity_horizontal_margin">28.0dip</dimen>
+    <dimen name="button_text_size">15.0sp</dimen>
+    <dimen name="cancel_order_popmenu_width">200.0dip</dimen>
+    <dimen name="default_text_size">18.0sp</dimen>
+    <dimen name="dialog_width">400.0dip</dimen>
+    <dimen name="float_button_size">0.0dip</dimen>
+    <dimen name="navigation_drawer_width">320.0dip</dimen>
+    <dimen name="text_size">24.0sp</dimen>
+    <dimen name="toolbar_elevation">7.0dip</dimen>
+    <dimen name="activity_horizontal_margin_top">64.0dip</dimen>
+    <dimen name="main_address_text_size">20.0sp</dimen>
+    <dimen name="main_comment_text_size">19.0sp</dimen>
+    <dimen name="name_width">200.0dip</dimen>
+    <dimen name="ok_button_height">50.0dip</dimen>
+    <dimen name="ok_button_width">140.0dip</dimen>
+</resources>

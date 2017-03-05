@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="dimen" name="abc_dialog_fixed_height_major">60.000004%</item>
+    <item type="dimen" name="abc_dialog_fixed_height_minor">90.0%</item>
+    <item type="dimen" name="abc_dialog_fixed_width_major">50.0%</item>
+    <item type="dimen" name="abc_dialog_fixed_width_minor">69.99999%</item>
+    <item type="dimen" name="abc_dialog_min_width_major">45.000004%</item>
+    <item type="dimen" name="abc_dialog_min_width_minor">72.0%</item>
+    <dimen name="activity_horizontal_margin">64.0dip</dimen>
+    <dimen name="button_text_size">18.0sp</dimen>
+    <dimen name="cancel_order_popmenu_width">220.0dip</dimen>
+    <dimen name="default_text_size">20.0sp</dimen>
+    <dimen name="dialog_width">500.0dip</dimen>
+    <dimen name="float_button_size">0.0dip</dimen>
+    <dimen name="navigation_drawer_width">320.0dip</dimen>
+    <dimen name="toolbar_elevation">7.0dip</dimen>
+    <dimen name="need_update_text_size">50.0sp</dimen>
+    <dimen name="about_text_size">20.0sp</dimen>
+    <dimen name="activity_horizontal_margin_top">64.0dip</dimen>
+    <dimen name="main_address_text_size">22.0sp</dimen>
+    <dimen name="main_comment_text_size">20.0sp</dimen>
+    <dimen name="name_width">180.0dip</dimen>
+    <dimen name="popmenu_left_margin">40.0dip</dimen>
+    <dimen name="signin_text_size">44.0sp</dimen>
+</resources>

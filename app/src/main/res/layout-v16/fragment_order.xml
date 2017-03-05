@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:animateLayoutChanges="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="true"
+            android:paddingBottom="60.0dip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/addresses_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8.0dip"
+                    android:focusable="true"
+                    app:cardCornerRadius="0.0dip"
+                    app:cardElevation="4.0dip">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <android.support.design.widget.CoordinatorLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@id/addresses_recyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:animateLayoutChanges="false"
+                                android:clipToPadding="false"
+                                android:focusable="true"
+                                android:overScrollMode="never" />
+
+                            <FrameLayout
+                                android:id="@+id/add_address_layout"
+                                android:layout_width="72.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom|center|right"
+                                android:layout_marginBottom="49.0dip"
+                                android:layout_marginRight="64.0dip">
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2.0dip"
+                                    android:layout_gravity="center"
+                                    android:background="@android:color/white" />
+
+                                <FrameLayout
+                                    android:layout_width="40.0dip"
+                                    android:layout_height="40.0dip"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/add_address_fab"
+                                    android:padding="1.0dip">
+
+                                    <android.support.design.widget.FloatingActionButton
+                                        android:id="@+id/add_address_fab"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:clickable="true"
+                                        android:scaleType="center"
+                                        android:tint="@color/colorGreen"
+                                        app:backgroundTint="@android:color/white"
+                                        app:borderWidth="0.0dip"
+                                        app:elevation="0.0dip"
+                                        app:rippleColor="@color/colorGreen"
+                                        app:srcCompat="@mipmap/ic_plus_black_24dp" />
+                                </FrameLayout>
+                            </FrameLayout>
+                        </android.support.design.widget.CoordinatorLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1.0dip"
+                            android:background="@color/divider" />
+
+                        <LinearLayout
+                            android:id="@+id/comment_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true"
+                            android:background="?android:selectableItemBackground"
+                            android:clickable="true"
+                            android:orientation="horizontal"
+                            android:paddingBottom="8.0dip"
+                            android:paddingTop="8.0dip">
+
+                            <ImageView
+                                android:id="@+id/comment_icon"
+                                android:layout_width="@dimen/order_fragment_default_item_icon_size"
+                                android:layout_height="@dimen/order_fragment_default_item_icon_size"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="@dimen/order_fragment_default_item_margin_left"
+                                android:layout_marginRight="@dimen/order_fragment_default_item_icon_margin_right"
+                                android:src="@mipmap/details_comment"
+                                android:tint="@color/secondaryText" />
+
+                            <EditText
+                                android:id="@+id/comment_editText"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginBottom="8.0dip"
+                                android:layout_marginRight="16.0dip"
+                                android:layout_marginTop="8.0dip"
+                                android:layout_weight="1.0"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="sans-serif-light"
+                                android:hint="@string/order_details_comment_hint"
+                                android:textSize="16.0sp" />
+
+                            <ImageView
+                                android:id="@+id/clear_comment_imageView"
+                                android:layout_width="44.0dip"
+                                android:layout_height="44.0dip"
+                                android:layout_gravity="center"
+                                android:layout_marginRight="8.0dip"
+                                android:background="@drawable/order_close_button"
+                                android:padding="12.0dip"
+                                android:scaleType="centerCrop"
+                                android:src="@mipmap/close_icon"
+                                android:tint="@color/colorRed" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/additional_data_card_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16.0dip"
+                    android:layout_marginLeft="8.0dip"
+                    android:layout_marginRight="8.0dip"
+                    android:focusable="true"
+                    app:cardCornerRadius="0.0dip"
+                    app:cardElevation="4.0dip">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60.0dip"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/details_button_layout"
+                            android:layout_width="0.0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50.0"
+                            android:background="?android:selectableItemBackground"
+                            android:clickable="true"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/order_fragment_default_item_margin_left"
+                            android:paddingRight="@dimen/order_fragment_default_item_margin_left">
+
+                            <ImageView
+                                android:layout_width="@dimen/order_fragment_default_item_icon_size"
+                                android:layout_height="@dimen/order_fragment_default_item_icon_size"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="@dimen/order_fragment_additional_item_icon_margin_right"
+                                android:src="@mipmap/order_details"
+                                android:tint="@color/icons" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif-light"
+                                    android:maxLines="1"
+                                    android:text="@string/order_details_title"
+                                    android:textColor="@color/primaryText"
+                                    android:textSize="16.0sp" />
+
+                                <TextView
+                                    android:id="@+id/order_details_subtext_textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif-light"
+                                    android:maxLines="1"
+                                    android:text="@string/order_details_title"
+                                    android:textColor="@color/secondaryText"
+                                    android:textSize="12.0sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/additional_data_divider"
+                            android:layout_width="1.0dip"
+                            android:layout_height="match_parent"
+                            android:background="@color/divider"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:id="@+id/bonus_button_layout"
+                            android:layout_width="0.0dip"
+                            android:layout_height="match_parent"
+                            android:layout_weight="50.0"
+                            android:background="?android:selectableItemBackground"
+                            android:clickable="true"
+                            android:orientation="horizontal"
+                            android:paddingLeft="@dimen/order_fragment_default_item_margin_left"
+                            android:paddingRight="@dimen/order_fragment_default_item_margin_left"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="@dimen/order_fragment_default_item_icon_size"
+                                android:layout_height="@dimen/order_fragment_default_item_icon_size"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="@dimen/order_fragment_additional_item_icon_margin_right"
+                                android:src="@mipmap/order_bonus"
+                                android:tint="@color/icons" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif-light"
+                                    android:maxLines="1"
+                                    android:text="@string/order_bonus_title"
+                                    android:textColor="@color/primaryText"
+                                    android:textSize="16.0sp" />
+
+                                <TextView
+                                    android:id="@+id/bonus_balance_textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="end"
+                                    android:fontFamily="sans-serif-light"
+                                    android:maxLines="1"
+                                    android:textColor="@color/secondaryText"
+                                    android:textSize="12.0sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60.0dip"
+            android:background="@color/colorAccent"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/root_price_layout"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="50.0"
+                android:background="?selectableItemBackground"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/price_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="invisible">
+
+                    <TextView
+                        android:id="@+id/order_price_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif"
+                        android:maxLines="1"
+                        android:text="450₸"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/avh_price_text_size" />
+
+                    <TextView
+                        android:id="@+id/order_bonus_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="top"
+                        android:layout_marginBottom="16.0dip"
+                        android:layout_marginLeft="8.0dip"
+                        android:background="@drawable/badge_background"
+                        android:ellipsize="end"
+                        android:fontFamily="sans-serif"
+                        android:maxLines="1"
+                        android:paddingBottom="2.0dip"
+                        android:paddingLeft="8.0dip"
+                        android:paddingRight="8.0dip"
+                        android:paddingTop="2.0dip"
+                        android:text="-115"
+                        android:textColor="@android:color/white"
+                        android:textSize="14.0sp" />
+                </LinearLayout>
+
+                <com.wang.avi.AVLoadingIndicatorView
+                    android:id="@+id/price_loading_view"
+                    style="@style/AVLoadingIndicatorView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="invisible"
+                    app:indicatorColor="@android:color/white"
+                    app:indicatorName="BallClipRotateIndicator" />
+            </FrameLayout>
+
+            <View
+                android:id="@+id/price_divider"
+                android:layout_width="1.0dip"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16.0dip"
+                android:layout_marginTop="16.0dip"
+                android:background="@android:color/white"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/create_order_button"
+                android:layout_width="0.0dip"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="50.0"
+                android:background="?selectableItemBackground"
+                android:clickable="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:ellipsize="end"
+                    android:fontFamily="sans-serif"
+                    android:maxLines="1"
+                    android:paddingLeft="16.0dip"
+                    android:paddingRight="16.0dip"
+                    android:text="@string/order_create_order_button"
+                    android:textColor="@android:color/white"
+                    android:textSize="14.0sp" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/touch_interceptor_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible" />
+</RelativeLayout>

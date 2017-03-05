@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180.0dip"
+    android:background="@drawable/navigation_drawer_header">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/user_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="56.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical"
+            android:paddingBottom="8.0dip"
+            android:paddingLeft="16.0dip"
+            android:paddingRight="16.0dip">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/user_name_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Неизвестно"
+                    android:textColor="@android:color/white"
+                    android:textSize="16.0sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/user_phone_textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="неизвестно"
+                    android:textColor="@android:color/white"
+                    android:textSize="14.0sp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/user_icon_imageView"
+            android:layout_width="72.0dip"
+            android:layout_height="72.0dip"
+            android:layout_above="@id/user_info_layout"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="8.0dip"
+            android:layout_marginLeft="16.0dip"
+            android:layout_marginRight="16.0dip"
+            android:adjustViewBounds="true"
+            android:clickable="true"
+            android:src="@drawable/ic_account_circle_black_48dp"
+            android:tint="@android:color/white" />
+    </RelativeLayout>
+</FrameLayout>

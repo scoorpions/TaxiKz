@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/favorite_addresses_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?selectableItemBackground"
+        android:orientation="horizontal">
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:id="@+id/favorite_addresses_name"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/remove_icon_layout"
+            android:layout_toStartOf="@+id/remove_icon_layout"
+            android:layout_weight="1.0"
+            android:ellipsize="end"
+            android:padding="15.0dip"
+            android:textSize="@dimen/default_text_size"
+            app:typeface="roboto_condensed_light" />
+
+        <LinearLayout
+            android:id="@+id/remove_icon_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="?selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:padding="10.0dip"
+                app:srcCompat="@drawable/ic_delete" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dip"
+        android:background="@color/divider"
+        android:paddingLeft="40.0dip"
+        android:paddingRight="40.0dip" />
+</LinearLayout>

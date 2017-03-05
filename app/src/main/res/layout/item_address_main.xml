@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/address_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="?android:selectableItemBackground"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin">
+
+    <ImageView
+        android:id="@+id/address_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@null" />
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        android:padding="4.0dip">
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:id="@+id/adress_name_caption"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/address_caption"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/primaryText"
+            android:textSize="@dimen/default_text_size"
+            app:typeface="roboto_condensed_regular" />
+
+        <com.devspark.robototextview.widget.RobotoTextView
+            android:id="@+id/txt_address_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:hint="@string/not_refered_caption"
+            android:textColor="@color/secondaryText"
+            android:textSize="@dimen/default_text_size"
+            app:typeface="roboto_condensed_regular" />
+    </LinearLayout>
+</LinearLayout>
